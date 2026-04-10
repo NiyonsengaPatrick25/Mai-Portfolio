@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.menu{
+    @apply hover:underline  hover:translate-y-0.5 hover:text-orange-400 cursor-pointer transition-all duration-75 text-center pt-1
+}
+
+.connect{
+    @apply hover:scale-130 transition-all duration-75 cursor-pointer ease-in-out text-lg
+}

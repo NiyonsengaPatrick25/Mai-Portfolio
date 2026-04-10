@@ -1,0 +1,264 @@
+import React, { useState } from 'react'
+import { FaArrowCircleRight, FaArrowDown, FaCircle, FaEnvelope, FaGithub, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter, FaVoicemail } from 'react-icons/fa'
+import { FaBars, FaBuildingCircleExclamation, FaChartLine, FaDownload, FaLocationDot, FaLocationPin, FaMapLocation, FaMapLocationDot, FaMessage, FaUsersLine } from 'react-icons/fa6'
+import image from '../assets/image/IMG_7201.JPG'
+import { BsJavascript } from 'react-icons/bs'
+// my skills logos
+import react from '../assets/logos/react.png'
+import javascript from '../assets/logos/js.png'
+import script from '../assets/logos/typescript.png'
+import tailwind from '../assets/logos/tailwind.png'
+import html from '../assets/logos/html.png'
+import css from '../assets/logos/css3.jpg'
+import git from '../assets/logos/git.png'
+import github from '../assets/logos/github.png'
+// end
+
+// my project
+import ecommerce from '../assets/image/ecommerce.jpg'
+import task from '../assets/image/task.jpg'
+import plane from '../assets/image/plane.jpg'
+// end my project
+// contact me
+import senticon from '../assets/logos/senticon.png'
+// end contact me
+import {motion} from 'framer-motion'
+
+const OnePage = () => {
+
+    const [open, setOpen] = useState(false)
+  return (
+    <motion.div
+  
+    >
+      <nav className='shadow-md sticky top-0 z-60 backdrop-blur-2xl'>
+        {/* navbar */}
+        <div className=' flex flex-row items-center justify-between p-2 max-w-6xl mx-auto '>
+        
+        <div className=' pl-5'>
+            <h1 className='text-orange-400 text-2xl flex gap-3  '><span className='font-bold text-5xl'></span>Patrick</h1>
+        </div>
+        <div className='hidden lg:flex'>
+            <ul className='flex gap-10'>
+                <li className="menu"><a href="#home">Home</a></li>
+                <li className="menu"><a href="#about">About</a></li>
+                <li className="menu"><a href="#skills">Skills</a></li>
+                <li className="menu"><a href="#project"></a>Projects</li>
+                <li className="menu"><a href="#contact"></a>Contact</li>
+            </ul>
+        </div>
+        <div className=''>
+            <button className=' border text-white bg-orange-400 border-orange-400 rounded-full px-4 py-1  hover:scale-95 cursor-pointer transition-all duration-75'><a href="/src/assets/L5 SOD PYTHON PROGRAMMING GROUP WORK.pdf" download className='flex gap-2'><FaDownload /> Download CV</a></button>
+        </div>
+        <div className='lg:hidden cursor-pointer'>
+            <button onClick={()=>setOpen(!open)}>
+                <FaBars />
+            </button>
+        </div>
+        </div>
+      </nav>
+      <div className={`lg:hidden ${open?'fixed':'hidden'} w-full cursor-pointer`}>
+      <div className='flex flex-col gap-2 items-end text-black'>
+            <ul className='  flex flex-col gap-2  w-50 h-50 bg-gray-200 rounded-b-xl pt-2  '>
+                <li className="menu"><a href="#home">Home</a></li>
+                <li className="menu"><a href="#about">About</a></li>
+                <li className="menu"><a href="#skills">Skills</a></li>
+                <li className="menu"><a href="#project"></a>Projects</li>
+                <li className="menu"><a href="#contact"></a>Contact</li>
+            </ul>
+        </div>
+        </div>
+      <main className='max-w-6xl mx-auto flex flex-col md:flex-row lg:flex-row  items-center justify-between p-10  scroll-mt-20' id='home'>
+        {/* maincomponent */}
+        <div className='pl-20'>
+            <h1 className='text-xl font-bold'>Hi, I'm</h1>
+            <h2 className='text-2xl font-bold'>Niyonsenga</h2>
+            <h3 className='text-2xl font-bold text-orange-400'>Patrick</h3>
+            <p className='text-gray-500 pt-5'>A passionate Frontend Developer Who builds <br />
+                modern, responsive, and user-friendly <br />
+                web application <br />
+            </p>
+            <div className='flex gap-5 pt-5 flex-col md:flex-row lg:flex-row'>
+                <button className='flex gap-3 text-white bg-orange-400 border border-orange-300 rounded-lg px-2 py-1 hover:scale-95 cursor-pointer transition-all duration-75'>View My Work <FaArrowCircleRight className='pt-1 text-xl'/></button>
+                <button className='flex gap-3 border border-gray-300 rounded-lg px-2 py-1 hover:scale-95 cursor-pointer transition-all duration-75'>Conact Me <FaEnvelope className='pt-1 text-xl '/></button>
+            </div>
+            <div className='flex gap-5 pt-8 flex-col md:flex-row lg:flex-row'>
+            <div>
+                <h1 className='font-bold'>Let's Connect</h1>
+                </div>
+                <div className='flex gap-5 pb-5'>
+                <button className='connect hover:text-orange-400'><FaGithub /></button>
+                <button className='connect hover:text-orange-400'><FaLinkedin /></button>
+                <button className='connect hover:text-orange-400'><FaTwitter /></button>
+                <button className='connect hover:text-orange-400'><FaEnvelope /></button>
+                </div>
+            </div>
+        </div>
+        <div className='pr-10 relative'>
+            <img src={image} alt=""  className='w-70  h-70 rounded-full shadow-lg shadow-orange-400'/>
+            <div className='absolute text-sm bottom-50 right-60'><p className='rounded-full border border-black text-white bg-black  px-4 py-1'>5 Years <br />
+            Experience</p></div>
+            <div className='absolute text-sm bottom-5 shadow-lg r-60'><p className='rounded-2xl border border-white text-black bg-white  px-4 py-1'>Available for <br />
+            <span className='font-semibold'>Freelance</span></p></div>
+            <div></div>
+        </div>
+      </main>
+      <div className='pl- scroll-mt-10 max-w-6xl mx-auto' id='about' >
+      <div>
+        {/* about me*/}
+        <h1 className='text-sm text-orange-400'>ABOUT ME</h1>
+        <h2 className='font-bold text-2xl'>Get to know me</h2>
+        <p className='text-gray-500 pt-2'>I'm a frontend developer with a strong passion for building <br />
+        beautiful and function web experience. i foces on writing <br />
+        clean code, Creating intutive interfaces and delivering <br />
+        solution that make nin impact</p>
+      </div>
+      <div className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
+        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+            <h1 className='flex gap-2'><FaLocationDot className='text-orange-400 pt-1 text-xl'/> Location </h1>
+            <p>Kigali, Rwanda</p>
+        </div>
+        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+            <h1 className='flex gap-2'><FaEnvelope  className='text-orange-400 pt-1 text-xl'/> Email</h1>
+            <p>niyonsengap563@gmail.com</p>
+        </div>
+        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+            <h1 className='flex gap-2'><FaArrowCircleRight  className='text-orange-400 pt-1 text-xl'/> Available</h1>
+            <p> Open To Work</p>
+        </div>
+      </div>
+      <div id='skills' className='max-w-6xl mx-auto '>
+        <div className='pt-8'>
+            <h1 className='text-orange-400 text-sm'>MY SKILLS</h1>
+            <p className='font-bold text-2xl'>Technologies I Work With</p>
+        </div>
+      <div className='grid gap-5 justify-between items-center pt-5 pr-10 flex-col grid-cols-2 sm:grid-cols-4 ' >
+        {/* my skills */}
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={react} alt=""  className='w-10 h-10 mx-auto'/>
+            <p className='text-sm '>React</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={javascript} alt="" className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>JavaScript</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={script} alt="" className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>TYpeScript</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'> 
+            <img src={tailwind} alt="" className='w-10 h-10 mx-auto' />
+            <p className='text-sm text-center'>TailwindCss</p>
+            </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={html} alt=""  className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>HTMLS</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={css} alt=""  className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>CSS</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <img src={git} alt="" className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>Git</p>
+        </div>
+        <div className='shadow-lg rounded-xl px-8 py-4 '>
+            <img src={github} alt="" className='w-10 h-10 mx-auto'/>
+            <p className='text-sm text-center'>GitHub</p>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div className='pl-25 pr-10 max-w-6xl mx-auto' id='project'>
+        {/* my project */}
+        <div className='flex flex-col md:flex-row lg:flex-row justify-between pt-10'>
+            <div>
+        <h1 className='text-orange-400 text-sm'>MY PROJECTS</h1>
+        <p className='font-bold text-2xl'>Some things i'v built</p>
+        </div>
+        <div className='pt-3'>
+            <a href="#" className='flex gap-3 text-orange-400'>View All <FaArrowCircleRight className='pt-1 text-xl'/></a>
+        </div>
+        </div>
+        <div className='flex flex-col md:flex-row ld:flex-row  justify-between pt-5'>
+            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
+                <img src={ecommerce} alt="" className='w-70 h-40 rounded-2xl  '/>
+                <h1 className='text-lg font-bold '>E-commerce Store</h1>
+                <p className='text-sm'>A full-featured online store with cart <br />
+                checkout, and payment integration</p>
+                <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2'>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                </div>
+                
+            </div>
+            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
+                <img src={task} alt="" className='w-70 h-40 rounded-2xl'/>
+                <h1 className='text-lg font-bold'>Task Manager App</h1>
+                <p className='text-sm'>A product app to manage tasks, <br />
+                deadlines, and categories</p>
+
+                <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2'>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                </div>
+            </div>
+            
+            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '> 
+                <img src={plane} alt=""  className='w-70 h-40 rounded-2xl'/>
+                <h1 className='text-lg font-bold '>Travel Website</h1>
+                <p className='text-sm'>A responsive travel website with destination <br />
+                pages and booking UI</p>
+                <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2 '>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
+                    <button className='flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                </div>
+                </div>
+        </div>
+      </div>
+      <div className=' flex flex-col md:flex-row lg:flex-row justify-between items-center pl-10 pr-10 pt-10 scroll-mt-10' id='contact'>
+        {/* Contact me */}
+        <div>
+            <h1 className='text-orange-400 text-sm'>CONTACT ME</h1>
+            <h2 className='font-bold text-2xl'>Let's work together</h2>
+            <p className='text-sm pt-3'>Have a project in mind or just want to say hello? <br />
+            Feel free to reach out</p>
+            <h3 className='flex gap-2 pt-3'><FaEnvelope className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Email</span></h3>
+            <h3 className='flex gap-2 '><FaPhone className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Phone</span></h3>
+            <h3 className='flex gap-2 '><FaLocationDot className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Location</span></h3>
+        </div>
+        <div className='pt-10'>
+            <div className='flex gap-5'>
+                <input type="text" name="" id="" className='w-full md:72 shadow-gray-300 focus:shadow-md px-4 py-1 rounded-lg outline-none border border-gray-400' placeholder='Your Name'/>
+                <input type="text" name="" id="" className='w-full md:72 shadow-gray-300 focus:shadow-md px-4 py-1 rounded-lg outline-none border border-gray-400' placeholder="name@example.com"/>
+            </div>
+            <div className='pt-5 '>
+            <textarea placeholder='Your Message' className='w-full md:72 shadow-gray-300  pl-68 focus:shadow-md px-4 py-1 rounded-lg border outline-none border-gray-400 pt-3'>
+
+            </textarea>
+            </div>
+            <div className='pt-5'>
+            <button className='hover:scale-95 cursor-pointer transition-all duration-75 flex gap-2  border border-orange-400 bg-orange-400 text-white px-2  py-1 rounded-lg '>Send Message <FaMessage className='pt-1 text-xl text-white'/> </button>
+            </div>
+        </div>
+        <div>
+            <img src={senticon} alt="" className='w-30 h-30'/>
+        </div>
+      </div>
+      <footer className='pt-3'>
+        {/* footer */}
+        <div className='flex flex-col md:flex-row lg:flex-row justify-between items-center pl-10 pr-10 bg-gray-200 p-2 '>
+            <div><p className=''><span className='text-orange-400'>&copy;</span> 2026 Niyonsenga. All rights reserved</p></div>
+            <div className='flex gap-5  '>
+                <button className='connect hover:text-orange-400'><FaGithub /></button>
+                <button className='connect hover:text-orange-400'><FaLinkedin /></button>
+                <button className='connect hover:text-orange-400'><FaTwitter /></button>
+                <button className='connect hover:text-orange-400'><FaEnvelope /></button>
+            </div>
+        </div>
+      </footer>
+    </motion.div>
+  )
+}
+
+export default OnePage
