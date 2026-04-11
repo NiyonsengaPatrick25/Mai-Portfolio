@@ -28,19 +28,17 @@ const OnePage = () => {
 
     const [open, setOpen] = useState(false)
   return (
-    <motion.div
-  
-    >
+    <motion.div>
       <nav className='shadow-md sticky top-0 z-60 backdrop-blur-2xl'>
         {/* navbar */}
         <div className=' flex flex-row items-center justify-between p-2 max-w-6xl mx-auto '>
         
-        <div className=' pl-5'>
+        <div className=''>
             <h1 className='text-orange-400 text-2xl flex gap-3  '><span className='font-bold text-5xl'></span>Patrick</h1>
         </div>
         <div className='hidden lg:flex'>
             <ul className='flex gap-10'>
-                <li className="menu"><a href="#home">Home</a></li>
+                <li className="menu"><a href="#">Home</a></li>
                 <li className="menu"><a href="#about">About</a></li>
                 <li className="menu"><a href="#skills">Skills</a></li>
                 <li className="menu"><a href="#project"></a>Projects</li>
@@ -60,7 +58,7 @@ const OnePage = () => {
       <div className={`lg:hidden ${open?'fixed':'hidden'} w-full cursor-pointer`}>
       <div className='flex flex-col gap-2 items-end text-black'>
             <ul className='  flex flex-col gap-2  w-50 h-50 bg-gray-200 rounded-b-xl pt-2  '>
-                <li className="menu"><a href="#home">Home</a></li>
+                <li className="menu"><a href="#">Home</a></li>
                 <li className="menu"><a href="#about">About</a></li>
                 <li className="menu"><a href="#skills">Skills</a></li>
                 <li className="menu"><a href="#project"></a>Projects</li>
@@ -70,7 +68,11 @@ const OnePage = () => {
         </div>
       <main className='max-w-6xl mx-auto flex flex-col md:flex-row lg:flex-row  items-center justify-between p-10  scroll-mt-20' id='home'>
         {/* maincomponent */}
-        <div className='pl-20'>
+        <motion.div 
+        initial={{opacity:0, x:-100}}
+        animate={{opacity:1, x:0}}
+        transition={{duration:0.8}}
+        className='pl-20'>
             <h1 className='text-xl font-bold'>Hi, I'm</h1>
             <h2 className='text-2xl font-bold'>Niyonsenga</h2>
             <h3 className='text-2xl font-bold text-orange-400'>Patrick</h3>
@@ -79,32 +81,59 @@ const OnePage = () => {
                 web application <br />
             </p>
             <div className='flex gap-5 pt-5 flex-col md:flex-row lg:flex-row'>
-                <button className='flex gap-3 text-white bg-orange-400 border border-orange-300 rounded-lg px-2 py-1 hover:scale-95 cursor-pointer transition-all duration-75'>View My Work <FaArrowCircleRight className='pt-1 text-xl'/></button>
-                <button className='flex gap-3 border border-gray-300 rounded-lg px-2 py-1 hover:scale-95 cursor-pointer transition-all duration-75'>Conact Me <FaEnvelope className='pt-1 text-xl '/></button>
+                <motion.button 
+                whileTap={{scale:0.9}}
+                whileHover={{scale:1.1}}
+                className='flex gap-3 text-white bg-orange-400 border border-orange-300 rounded-lg px-2 py-1 cursor-pointer transition-all duration-75'>View My Work <FaArrowCircleRight className='pt-1 text-xl'/></motion.button>
+                <motion.button
+                whileTap={{scale:0.9}}
+                whileHover={{scale:1.1}} 
+                className='flex gap-3 border border-gray-300 rounded-lg px-2 py-1  cursor-pointer transition-all duration-75'>Conact Me <FaEnvelope className='pt-1 text-xl '/></motion.button>
             </div>
             <div className='flex gap-5 pt-8 flex-col md:flex-row lg:flex-row'>
             <div>
                 <h1 className='font-bold'>Let's Connect</h1>
                 </div>
                 <div className='flex gap-5 pb-5'>
-                <button className='connect hover:text-orange-400'><FaGithub /></button>
-                <button className='connect hover:text-orange-400'><FaLinkedin /></button>
-                <button className='connect hover:text-orange-400'><FaTwitter /></button>
-                <button className='connect hover:text-orange-400'><FaEnvelope /></button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaGithub /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaLinkedin /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaTwitter /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaEnvelope /></motion.button>
                 </div>
             </div>
-        </div>
-        <div className='pr-10 relative'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, x:100}}
+        animate={{opacity:1, x:0}}
+        transition={{duration:0.8}}
+        className='pr-10 relative w-70 h-auto'>
             <img src={image} alt=""  className='w-70  h-70 rounded-full shadow-lg shadow-orange-400'/>
-            <div className='absolute text-sm bottom-50 right-60'><p className='rounded-full border border-black text-white bg-black  px-4 py-1'>5 Years <br />
+            <div className='absolute text-sm bottom-50 right-50'><p className='rounded-full border border-black text-white bg-black  px-4 py-1'>5 Years <br />
             Experience</p></div>
             <div className='absolute text-sm bottom-5 shadow-lg r-60'><p className='rounded-2xl border border-white text-black bg-white  px-4 py-1'>Available for <br />
             <span className='font-semibold'>Freelance</span></p></div>
             <div></div>
-        </div>
+        </motion.div>
       </main>
-      <div className='pl- scroll-mt-10 max-w-6xl mx-auto' id='about' >
-      <div>
+      <motion.div 
+      className=' scroll-mt-10 max-w-6xl mx-auto' id='about' >
+      <motion.div
+        initial={{opacity:0, x:-100}}
+        animate={{opacity:1, x:0}}
+        transition={{duration:0.8}}
+      >
         {/* about me*/}
         <h1 className='text-sm text-orange-400'>ABOUT ME</h1>
         <h2 className='font-bold text-2xl'>Get to know me</h2>
@@ -112,113 +141,234 @@ const OnePage = () => {
         beautiful and function web experience. i foces on writing <br />
         clean code, Creating intutive interfaces and delivering <br />
         solution that make nin impact</p>
-      </div>
-      <div className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
-        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+      </motion.div>
+      <motion.div 
+      initial={{opacity:0, y:-40}}
+      animate={{opacity:1 , y:0}}
+      className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        animate={{opacity:1, y:0}}
+        transition={{delay:0.3}}
+        className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaLocationDot className='text-orange-400 pt-1 text-xl'/> Location </h1>
             <p>Kigali, Rwanda</p>
-        </div>
-        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        animate={{opacity:1, y:0}}
+        transition={{delay:0.5}}
+        className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaEnvelope  className='text-orange-400 pt-1 text-xl'/> Email</h1>
             <p>niyonsengap563@gmail.com</p>
-        </div>
-        <div className='shadow-lg  px-5 py-2 rounded-xl'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        animate={{opacity:1, y:0}}
+        transition={{delay:0.9}}
+        className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaArrowCircleRight  className='text-orange-400 pt-1 text-xl'/> Available</h1>
             <p> Open To Work</p>
-        </div>
-      </div>
-      <div id='skills' className='max-w-6xl mx-auto '>
-        <div className='pt-8'>
-            <h1 className='text-orange-400 text-sm'>MY SKILLS</h1>
-            <p className='font-bold text-2xl'>Technologies I Work With</p>
-        </div>
-      <div className='grid gap-5 justify-between items-center pt-5 pr-10 flex-col grid-cols-2 sm:grid-cols-4 ' >
+        </motion.div>
+      </motion.div>
+      <div  className='max-w-6xl mx-auto '>
+        <motion.div 
+        className='pt-8'>
+            <motion.h1
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}} 
+            className='text-orange-400 text-sm'>MY SKILLS</motion.h1>
+            <motion.p 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+            className='font-bold text-2xl'>Technologies I Work With</motion.p>
+        </motion.div>
+      <div className='grid gap-5 justify-between items-center pt-5 pr-10 flex-col grid-cols-2 sm:grid-cols-4 ' id='skills' >
         {/* my skills */}
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={react} alt=""  className='w-10 h-10 mx-auto'/>
-            <p className='text-sm '>React</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            <p className='text-sm text-center'>React</p>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={javascript} alt="" className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>JavaScript</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={script} alt="" className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>TYpeScript</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'> 
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'> 
             <img src={tailwind} alt="" className='w-10 h-10 mx-auto' />
             <p className='text-sm text-center'>TailwindCss</p>
-            </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+            </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={html} alt=""  className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>HTMLS</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={css} alt=""  className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>CSS</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 pb-5'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 pb-5'>
             <img src={git} alt="" className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>Git</p>
-        </div>
-        <div className='shadow-lg rounded-xl px-8 py-4 '>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        whileHover={{scale:1.1}}
+        className='shadow-lg rounded-xl px-8 py-4 '>
             <img src={github} alt="" className='w-10 h-10 mx-auto'/>
             <p className='text-sm text-center'>GitHub</p>
-        </div>
+        </motion.div>
       </div>
       </div>
-      </div>
-      <div className='pl-25 pr-10 max-w-6xl mx-auto' id='project'>
+      </motion.div>
+      <div className='pl-25 pr-10 max-w-6xl mx-auto' >
         {/* my project */}
         <div className='flex flex-col md:flex-row lg:flex-row justify-between pt-10'>
             <div>
-        <h1 className='text-orange-400 text-sm'>MY PROJECTS</h1>
-        <p className='font-bold text-2xl'>Some things i'v built</p>
+        <motion.h1 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='text-orange-400 text-sm'>MY PROJECTS</motion.h1>
+        <motion.p 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='font-bold text-2xl'>Some things i'v built</motion.p>
         </div>
-        <div className='pt-3'>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='pt-3'>
             <a href="#" className='flex gap-3 text-orange-400'>View All <FaArrowCircleRight className='pt-1 text-xl'/></a>
+        </motion.div>
         </div>
-        </div>
-        <div className='flex flex-col md:flex-row ld:flex-row  justify-between pt-5'>
-            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
+        <div className='flex flex-col md:flex-row ld:flex-row  justify-between pt-5' id='project'>
+            <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+            className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
                 <img src={ecommerce} alt="" className='w-70 h-40 rounded-2xl  '/>
                 <h1 className='text-lg font-bold '>E-commerce Store</h1>
                 <p className='text-sm'>A full-featured online store with cart <br />
                 checkout, and payment integration</p>
                 <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2'>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                    <motion.button
+                    whileTap={{scale:0.9}}
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</motion.button>
+                    <motion.button
+                    whileTap={{scale:0.9}} 
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</motion.button>
                 </div>
                 
-            </div>
-            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
+            </motion.div>
+            <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+            className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
                 <img src={task} alt="" className='w-70 h-40 rounded-2xl'/>
                 <h1 className='text-lg font-bold'>Task Manager App</h1>
                 <p className='text-sm'>A product app to manage tasks, <br />
                 deadlines, and categories</p>
 
                 <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2'>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                    <motion.button
+                    whileTap={{scale:0.9}} 
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</motion.button>
+                    <motion.button
+                    whileTap={{scale:0.9}} 
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1 rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</motion.button>
                 </div>
-            </div>
+            </motion.div>
             
-            <div className='shadow-lg p-5 rounded-2xl shadow-gray-400 '> 
+            <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+            className='shadow-lg p-5 rounded-2xl shadow-gray-400 '> 
                 <img src={plane} alt=""  className='w-70 h-40 rounded-2xl'/>
                 <h1 className='text-lg font-bold '>Travel Website</h1>
                 <p className='text-sm'>A responsive travel website with destination <br />
                 pages and booking UI</p>
                 <div className='grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2 '>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</button>
-                    <button className='flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</button>
+                    <motion.button
+                    whileTap={{scale:0.9}} 
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaArrowDown className='pt-1 text-xl text-orange-400'/> Live Demo</motion.button>
+                    <motion.button
+                    whileTap={{scale:0.9}} 
+                    className='cursor-pointer hover:bg-gray-100 hover:border-orange-400 flex gap-2 border border-gray-200 px-3 py-1  rounded-full bg-gray-200 text-sm'><FaGithub  className='pt-1 text-xl text-orange-400'/> GitHub</motion.button>
                 </div>
-                </div>
+                </motion.div>
         </div>
       </div>
       <div className=' flex flex-col md:flex-row lg:flex-row justify-between items-center pl-10 pr-10 pt-10 scroll-mt-10' id='contact'>
         {/* Contact me */}
-        <div>
+        <motion.div
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        >
             <h1 className='text-orange-400 text-sm'>CONTACT ME</h1>
             <h2 className='font-bold text-2xl'>Let's work together</h2>
             <p className='text-sm pt-3'>Have a project in mind or just want to say hello? <br />
@@ -226,8 +376,13 @@ const OnePage = () => {
             <h3 className='flex gap-2 pt-3'><FaEnvelope className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Email</span></h3>
             <h3 className='flex gap-2 '><FaPhone className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Phone</span></h3>
             <h3 className='flex gap-2 '><FaLocationDot className='pt-1 text-xl text-orange-400'/> <span className='font-semibold'>Location</span></h3>
-        </div>
-        <div className='pt-10'>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='pt-10'>
             <div className='flex gap-5'>
                 <input type="text" name="" id="" className='w-full md:72 shadow-gray-300 focus:shadow-md px-4 py-1 rounded-lg outline-none border border-gray-400' placeholder='Your Name'/>
                 <input type="text" name="" id="" className='w-full md:72 shadow-gray-300 focus:shadow-md px-4 py-1 rounded-lg outline-none border border-gray-400' placeholder="name@example.com"/>
@@ -238,22 +393,42 @@ const OnePage = () => {
             </textarea>
             </div>
             <div className='pt-5'>
-            <button className='hover:scale-95 cursor-pointer transition-all duration-75 flex gap-2  border border-orange-400 bg-orange-400 text-white px-2  py-1 rounded-lg '>Send Message <FaMessage className='pt-1 text-xl text-white'/> </button>
+            <motion.button 
+            whileTap={{scale:0.9}}
+            whileHover={{scale:1.1}}
+            className='send cursor-pointer transition-all duration-75 flex gap-2  border border-orange-400 bg-orange-400 text-white px-2  py-1 rounded-lg '>Send Message <FaMessage className='pt-1 text-xl text-white'/> </motion.button>
             </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        >
             <img src={senticon} alt="" className='w-30 h-30'/>
-        </div>
+        </motion.div>
       </div>
       <footer className='pt-3'>
         {/* footer */}
         <div className='flex flex-col md:flex-row lg:flex-row justify-between items-center pl-10 pr-10 bg-gray-200 p-2 '>
             <div><p className=''><span className='text-orange-400'>&copy;</span> 2026 Niyonsenga. All rights reserved</p></div>
             <div className='flex gap-5  '>
-                <button className='connect hover:text-orange-400'><FaGithub /></button>
-                <button className='connect hover:text-orange-400'><FaLinkedin /></button>
-                <button className='connect hover:text-orange-400'><FaTwitter /></button>
-                <button className='connect hover:text-orange-400'><FaEnvelope /></button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaGithub /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaLinkedin /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaTwitter /></motion.button>
+                <motion.button 
+                whileHover={{scale:1.4}}
+                whileTap={{scale:0.9}}
+                className='connect hover:text-orange-400'><FaEnvelope /></motion.button>
             </div>
         </div>
       </footer>
