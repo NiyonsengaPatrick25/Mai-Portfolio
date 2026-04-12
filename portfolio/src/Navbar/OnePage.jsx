@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { FaArrowCircleRight, FaArrowDown, FaCircle, FaEnvelope, FaGithub, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter, FaVoicemail } from 'react-icons/fa'
 import { FaBars, FaBuildingCircleExclamation, FaChartLine, FaDownload, FaLocationDot, FaLocationPin, FaMapLocation, FaMapLocationDot, FaMessage, FaUsersLine } from 'react-icons/fa6'
-import image from '../assets/image/IMG_7201.JPG'
-import { BsJavascript } from 'react-icons/bs'
+import image from '../assets/image/img2.png'
 // my skills logos
 import react from '../assets/logos/react.png'
 import javascript from '../assets/logos/js.png'
@@ -31,10 +30,10 @@ const OnePage = () => {
     <motion.div>
       <nav className='shadow-md sticky top-0 z-60 backdrop-blur-2xl'>
         {/* navbar */}
-        <div className=' flex flex-row items-center justify-between p-2 max-w-6xl mx-auto '>
+        <div className=' flex flex-row items-center justify-between p-1 max-w-6xl mx-auto '>
         
         <div className=''>
-            <h1 className='text-orange-400 text-2xl flex gap-3  '><span className='font-bold text-5xl'></span>Patrick</h1>
+            <h1 className='text-orange-400 text-2xl flex items-center  '><span className='font-bold text-5xl'>P</span><span className='pt-4'>atrick</span></h1>
         </div>
         <div className='hidden lg:flex'>
             <ul className='flex gap-10'>
@@ -66,7 +65,7 @@ const OnePage = () => {
             </ul>
         </div>
         </div>
-      <main className='max-w-6xl mx-auto flex flex-col md:flex-row lg:flex-row  items-center justify-between p-10  scroll-mt-20' id='home'>
+      <main className='p-5 max-w-6xl mx-auto flex flex-col md:flex-row lg:flex-row  items-center justify-between   scroll-mt-20' id='home'>
         {/* maincomponent */}
         <motion.div 
         initial={{opacity:0, x:-100}}
@@ -118,54 +117,65 @@ const OnePage = () => {
         initial={{opacity:0, x:100}}
         animate={{opacity:1, x:0}}
         transition={{duration:0.8}}
-        className='pr-10 relative w-70 h-auto'>
-            <img src={image} alt=""  className='w-70  h-70 rounded-full shadow-lg shadow-orange-400'/>
-            <div className='absolute text-sm bottom-50 right-50'><p className='rounded-full border border-black text-white bg-black  px-4 py-1'>5 Years <br />
+        className='pr-10 relative pb-25'>
+            <img src={image} alt=""  className='w-full  h-auto rounded-b-full'/>
+            <div className='absolute text-sm bottom-80 right-60 rounded-full border border-black text-white bg-black'><p className='  px-4 py-1'>5 Years <br />
             Experience</p></div>
-            <div className='absolute text-sm bottom-5 shadow-lg r-60'><p className='rounded-2xl border border-white text-black bg-white  px-4 py-1'>Available for <br />
+            <div className='absolute text-sm bottom-35 shadow-sm shadow-gray-400 right-55 rounded-full border border-white text-black bg-white'><p className='  px-4 py-1'>Available for <br />
             <span className='font-semibold'>Freelance</span></p></div>
             <div></div>
         </motion.div>
       </main>
       <motion.div 
-      className=' scroll-mt-10 max-w-6xl mx-auto' id='about' >
-      <motion.div
-        initial={{opacity:0, x:-100}}
-        animate={{opacity:1, x:0}}
-        transition={{duration:0.8}}
-      >
+      className='pb-30 scroll-mt-10 max-w-6xl mx-auto' id='about' >
+      <motion.div>
         {/* about me*/}
-        <h1 className='text-sm text-orange-400'>ABOUT ME</h1>
-        <h2 className='font-bold text-2xl'>Get to know me</h2>
-        <p className='text-gray-500 pt-2'>I'm a frontend developer with a strong passion for building <br />
+        <motion.h1 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='text-sm text-orange-400'>ABOUT ME</motion.h1>
+        <motion.h2 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='font-bold text-2xl'>Get to know me</motion.h2>
+        <motion.p 
+        initial={{opacity:0, y:50}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
+        className='text-gray-500 pt-2'>I'm a frontend developer with a strong passion for building <br />
         beautiful and function web experience. i foces on writing <br />
         clean code, Creating intutive interfaces and delivering <br />
-        solution that make nin impact</p>
+        solution that make nin impact</motion.p>
       </motion.div>
-      <motion.div 
-      initial={{opacity:0, y:-40}}
-      animate={{opacity:1 , y:0}}
-      className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
+      <motion.div className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
         <motion.div 
         initial={{opacity:0, y:50}}
-        animate={{opacity:1, y:0}}
-        transition={{delay:0.3}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
         className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaLocationDot className='text-orange-400 pt-1 text-xl'/> Location </h1>
             <p>Kigali, Rwanda</p>
         </motion.div>
         <motion.div 
         initial={{opacity:0, y:50}}
-        animate={{opacity:1, y:0}}
-        transition={{delay:0.5}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
         className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaEnvelope  className='text-orange-400 pt-1 text-xl'/> Email</h1>
             <p>niyonsengap563@gmail.com</p>
         </motion.div>
         <motion.div 
         initial={{opacity:0, y:50}}
-        animate={{opacity:1, y:0}}
-        transition={{delay:0.9}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration:0.8}}
+        viewport={{once:true}}
         className='shadow-lg  px-5 py-2 rounded-xl'>
             <h1 className='flex gap-2'><FaArrowCircleRight  className='text-orange-400 pt-1 text-xl'/> Available</h1>
             <p> Open To Work</p>
