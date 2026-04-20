@@ -127,7 +127,7 @@ const OnePage = () => {
         </motion.div>
       </main>
       <motion.div 
-      className='pb-30 scroll-mt-10 max-w-6xl mx-auto' id='about' >
+      className='pb-30 scroll-mt-10 max-w-6xl mx-auto ' id='about' >
       <motion.div>
         {/* about me*/}
         <motion.h1 
@@ -135,24 +135,24 @@ const OnePage = () => {
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.8}}
         viewport={{once:true}}
-        className='text-sm text-orange-400'>ABOUT ME</motion.h1>
+        className='text-sm text-orange-400 pl-5'>ABOUT ME</motion.h1>
         <motion.h2 
         initial={{opacity:0, y:50}}
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.8}}
         viewport={{once:true}}
-        className='font-bold text-2xl'>Get to know me</motion.h2>
+        className='font-bold text-2xl pl-5'>Get to know me</motion.h2>
         <motion.p 
         initial={{opacity:0, y:50}}
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.8}}
         viewport={{once:true}}
-        className='text-gray-500 pt-2'>I'm a frontend developer with a strong passion for building <br />
+        className='text-gray-500 pt-2 pl-5'>I'm a frontend developer with a strong passion for building <br />
         beautiful and function web experience. i foces on writing <br />
         clean code, Creating intutive interfaces and delivering <br />
         solution that make nin impact</motion.p>
       </motion.div>
-      <motion.div className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row'>
+      <motion.div className='flex flex-col gap-15 pt-5 md:flex-row lg:flex-row pl-5'>
         <motion.div 
         initial={{opacity:0, y:50}}
         whileInView={{opacity:1, y:0}}
@@ -181,7 +181,7 @@ const OnePage = () => {
             <p> Open To Work</p>
         </motion.div>
       </motion.div>
-      <div  className='max-w-6xl mx-auto '>
+      <div  className='max-w-6xl mx-auto pl-5'>
         <motion.div 
         className='pt-8'>
             <motion.h1
@@ -197,7 +197,7 @@ const OnePage = () => {
         viewport={{once:true}}
             className='font-bold text-2xl'>Technologies I Work With</motion.p>
         </motion.div>
-      <div className='grid gap-5 justify-between items-center pt-5 pr-10 flex-col grid-cols-2 sm:grid-cols-4 ' id='skills' >
+      <div className='grid gap-5 pl-4 justify-between items-center pt-5 pr-10 flex-col grid-cols-2 sm:grid-cols-4 ' id='skills' >
         {/* my skills */}
         <motion.div 
         initial={{opacity:0, y:50}}
@@ -282,7 +282,7 @@ const OnePage = () => {
       </div>
       </div>
       </motion.div>
-      <div className='pl-25 pr-10 max-w-6xl mx-auto' >
+      <div className='pl-10 pr-10 max-w-6xl mx-auto' >
         {/* my project */}
         <div className='flex flex-col md:flex-row lg:flex-row justify-between pt-10'>
             <div>
@@ -308,7 +308,7 @@ const OnePage = () => {
             <a href="#" className='flex gap-3 text-orange-400'>View All <FaArrowCircleRight className='pt-1 text-xl'/></a>
         </motion.div>
         </div>
-        <div className='flex flex-col md:flex-row ld:flex-row  justify-between pt-5' id='project'>
+        <div className='flex flex-col md:flex-row ld:flex-row   justify-between pt-5' id='project'>
             <motion.div 
         initial={{opacity:0, y:50}}
         whileInView={{opacity:1, y:0}}
@@ -334,7 +334,7 @@ const OnePage = () => {
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.8}}
         viewport={{once:true}}
-            className='shadow-lg p-5 rounded-2xl shadow-gray-400 '>
+            className='shadow-lg p-5 rounded-2xl shadow-gray-400 pt-8'>
                 <img src={task} alt="" className='w-70 h-40 rounded-2xl'/>
                 <h1 className='text-lg font-bold'>Task Manager App</h1>
                 <p className='text-sm'>A product app to manage tasks, <br />
@@ -355,7 +355,7 @@ const OnePage = () => {
         whileInView={{opacity:1, y:0}}
         transition={{duration:0.8}}
         viewport={{once:true}}
-            className='shadow-lg p-5 rounded-2xl shadow-gray-400 '> 
+            className='shadow-lg p-5 pt-8 rounded-2xl shadow-gray-400 '> 
                 <img src={plane} alt=""  className='w-70 h-40 rounded-2xl'/>
                 <h1 className='text-lg font-bold '>Travel Website</h1>
                 <p className='text-sm'>A responsive travel website with destination <br />
